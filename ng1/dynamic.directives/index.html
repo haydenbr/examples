@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='dynamic'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dynamic Directives</title>
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/dynamic.directive.js"></script>
+    <script src="directives/questions.directive.js"></script>
+    <script src="directives/questions.controllers.js"></script>
+
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+  </head>
+
+  <body ng-controller="mainCtrl as mainVm">
+    <div class="jumbotron"><h1>{{mainVm.message}}</h1></div>
+
+    <div style="margin: 48px;">
+      <div ng-repeat="question in mainVm.questions" style="margin-bottom: 24px;">
+          <hr />
+          <directive directive-name="question" question-data="question"
+            controller-name="{{question.displayType + 'Ctrl'}}" display-type="{{question.displayType}}">
+          </directive>
+      </div>
+    </div>
+
+  </body>
+</html>

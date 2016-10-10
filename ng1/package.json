@@ -1,0 +1,16 @@
+{
+  "name": "ng1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.17.2",
+    "gulp": "^3.9.1"
+  }
+}
